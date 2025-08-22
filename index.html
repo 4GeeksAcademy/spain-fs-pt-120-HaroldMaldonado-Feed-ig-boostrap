@@ -7,6 +7,7 @@
     <title>Instagram Poster</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/18286a149e.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-light">
@@ -20,23 +21,31 @@
 
         <div class="ms-auto d-flex align-items-center">
             <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Crear Nuevo Post
-</button>
+                Crear Nuevo Post
+            </button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Caption:</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Comments</label>
+                        </div>
+                        <div class="d-flex flex-start p-3 m-1">
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="modal-footer">
+
+
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary">Publicar</button>
                         </div>
                     </div>
                 </div>
@@ -60,8 +69,8 @@
         </div>
     </nav>
 
-    <div class="container-fluid py-4">
-        <ul class="nav nav-tabs mb-3 d-flex justify-content-center" id="myTab" role="tablist">
+    <div class="container py-4">
+        <ul class="nav nav-tabs justify-content-center mb-3" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria"
                     type="button" role="tab">Galería</button>
@@ -72,51 +81,200 @@
             </li>
         </ul>
 
+
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="galeria" role="tabpanel">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="ratio ratio-1x1">
-                            <img src="mar.jpg" class="object-fit-cover" alt="foto1">
+                            <img id="foto1" src="mar.jpg" class="object-fit-cover" alt="foto1">
                         </div>
                     </div>
                     <div class="col">
                         <div class="ratio ratio-1x1">
-                            <img src="museo.jpg" class="object-fit-cover" alt="foto2">
+                            <img id="foto2" src="museo.jpg" class="object-fit-cover" alt="foto2">
                         </div>
                     </div>
                     <div class="col">
-                        <div class="ratio ratio-1x1"">
-                            <img src=" mercado.jpg" class="object-fit-cover" alt="foto3">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto3" src="mercado.jpg" class="object-fit-cover" alt="foto3">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto4" src="higos.jpg" class="object-fit-cover" alt="foto4">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto5" src="copa.jpg" class="object-fit-cover" alt="foto5">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto6" src="cereal.jpg" class="object-fit-cover" alt="foto6">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto7" src="caballo.jpg" class="object-fit-cover" alt="foto7">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto8" src="loro.jpg" class="object-fit-cover" alt="foto8">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img id="foto9" src="tranvia.jpg" class="object-fit-cover" alt="foto9">
                         </div>
                     </div>
                 </div>
             </div>
 
 
+            
             <div class="tab-pane fade" id="timeline" role="tabpanel">
                 <div class="col-md-6 mx-auto">
                     <div class="card mb-4">
-                        <img src="mar.jpg" class="card-img-top" alt="foto1">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="mar.jpg" class="card-img-top" alt="foto1" aria-describedby="foto1">
                         <div class="card-body">
-                            <h5 class="card-title">primer post</h5>
-                            <p class="card-text">Descripción o comentario de la foto.</p>
+                            <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Visitando la playita</h5>
+                            <p class="card-text">Viaje a la playa con la mejor compañia.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="museo.jpg" class="card-img-top" alt="foto2" aria-describedby="foto2">
+                        <div class="card-body">
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Me encanta este museo</h5>
+                            <p class="card-text">Visitando el museo de arte moderno.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="mercado.jpg" class="card-img-top" alt="foto3" aria-describedby="foto3">
+                        <div class="card-body">
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Compras!!!</h5>
+                            <p class="card-text">Mercadito del pueblo con la abuela</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <img src="higos.jpg" class="card-img-top" alt="foto4" aria-describedby="foto4">
+                        <div class="card-body">
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Frutas!!!</h5>
+                            <p class="card-text">hoy comiendo higos</p>
                         </div>
                     </div>
 
                     <div class="card mb-4">
-                        <img src="museo.jpg" class="card-img-top" alt="foto2">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="copa.jpg" class="card-img-top" alt="foto5" aria-describedby="foto5">
                         <div class="card-body">
-                            <h5 class="card-title">segundo post</h5>
-                            <p class="card-text">Texto descriptivo aquí.</p>
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">pequeño postresito</h5>
+                            <p class="card-text">Mimosas!!!</p>
                         </div>
                     </div>
 
                     <div class="card mb-4">
-                        <img src="mercado.jpg" class="card-img-top" alt="foto3">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="cereal.jpg" class="card-img-top" alt="foto6" aria-describedby="foto6">
                         <div class="card-body">
-                            <h5 class="card-title">tercer post</h5>
-                            <p class="card-text">Comentario o descripción extra.</p>
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Desayunando</h5>
+                            <p class="card-text">nada mas completo que este bowl para empezar el dia!</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4"><div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="caballo.jpg" class="card-img-top" alt="foto7" aria-describedby="foto7">
+                        <div class="card-body">
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">mas animales!!</h5>
+                            <p class="card-text">Tde paseo por el campo.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="loro.jpg" class="card-img-top" alt="foto8" aria-describedby="foto8">
+                        <div class="card-body"> 
+                            <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">Los colores son vida</h5>
+                            <p class="card-text">Me encantan los animales</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                         <img src="fotoperfil.jpg" alt="fotoperfil" style="width:25px; height:25px;" class="rounded-circle me-2"> El Gato Instagramer
+                        </div>
+                        <img src="tranvia.jpg" class="card-img-top" alt="foto9" aria-describedby="foto9">
+                        <div class="card-body">
+                             <div class="border-bottom 1">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <h5 class="card-title">trolly trolly</h5>
+                            <p class="card-text">de paseo por las calles de amsterdam</p>
                         </div>
                     </div>
                 </div>
@@ -125,6 +283,7 @@
     </div>
 
 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
